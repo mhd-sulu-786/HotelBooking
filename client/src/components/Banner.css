@@ -1,0 +1,37 @@
+.banner {
+  padding: 2rem 0;
+  background-color: #0c0c0bc1;
+  height: 300px;
+  width: 100%; /* Adjust to full width */
+  margin: 40px auto 0; /* Center the banner */
+  /* Optional: Use max-width if you want to limit the width */
+  max-width: 1400px;
+}
+
+.banner h1 {
+  padding-top: 30px;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.banner .form-control {
+  border-radius: 0;
+}
+
+.banner .btn-small {
+  font-size: 0.875rem; /* Smaller font size */
+  padding: 0.5rem 1rem; /* Adjust padding */
+  height: 45px;
+  width: 140px; /* Adjust button width */
+  margin-left: 1000px; 
+  margin-top: -56px;/* Space between the button and input field */
+}
+
+.banner .d-flex {
+  align-items: center; /* Center align items vertically */
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+}

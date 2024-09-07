@@ -1,0 +1,237 @@
+.oravel-travel {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-contact a {
+    margin-left: 20px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .header-section {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    text-align: left;
+  }
+  
+  .header-content {
+    max-width: 600px;
+    margin: auto;
+  }
+  .header-content h1 {
+  margin-left: 100px;
+  }
+  .get-started-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .get-started-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .get-started-form input {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .get-started-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .get-started-form button:hover {
+    background-color: #ff4500;
+  }
+  
+  .info-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 100px;
+    text-align: left;
+  }
+  
+  .info-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    gap: 170px;
+    
+  }
+  
+  .info-card {
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .info-card img {
+    width: 100px;
+    height: 80px;
+  }
+  
+  .info-card p {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .promise-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .promise-text {
+    flex: 1;
+  }
+  
+  .promise-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .promise-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .promise-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 15px;
+  }
+  
+  .promise-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+  }
+  
+  .promise-item p {
+    font-size: 1rem;
+    color: var(--text-light);
+  }
+  
+  .promise-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .promise-image img {
+    width: 700px;
+    height: 500px;
+    border-radius: 8px;
+  }
+  .additional-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .additional-image img {
+   width: 600px;
+  }
+  
+  .additional-text {
+    width: 500px;
+  }
+
+  .additional-icon {
+    margin-right: 10px;
+    width: 80px;
+  }
+  .footer-section {
+    background-color: #0b0a0a;
+    color: #ddd;
+    padding: 20px;
+  }
+  
+  .footer-arrows {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .arrow-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  
+  .footer-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+  }
+  
+  .footer-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(70, 67, 67, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 300px;
+
+  }
+  
+  .contact-icon {
+    margin-right: 10px;
+    
+    
+  }

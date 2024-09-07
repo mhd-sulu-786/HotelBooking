@@ -1,0 +1,140 @@
+/* Styles for the Calendar Modal */
+.modal-dialog .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 79%;
+    color: var(--bs-modal-color);
+    pointer-events: auto;
+    background-color: var(--bs-modal-bg);
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+}
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .modal-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer {
+    background-color: #f1f1f1;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  /* Styles for the Calendar */
+  .react-calendar {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .react-calendar tile {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .react-calendar__tile--active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .react-calendar__tile--now {
+    background-color: #ffcc00;
+    color: black;
+  }
+  
+  .react-calendar__navigation button {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .react-calendar__month-view__weekdays {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .react-calendar__month-view__days__day--weekend {
+    color: #d9534f;
+  }
+  
+  .react-calendar__navigation button:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+  }
+  /* Apply box-sizing and color change to the entire calendar */
+.react-calendar, 
+.react-calendar *, 
+.react-calendar *:before, 
+.react-calendar *:after {
+    box-sizing: border-box;
+    color: black; /* Change text color to black */
+}
+
+/* Set background color for the entire calendar */
+.react-calendar {
+    background-color: white; /* Change background color to white */
+}
+
+/* Ensure days in month view also have black text and white background */
+.react-calendar__month-view__days__day {
+    color: black; /* Change day text color to black */
+    background-color: rgb(173, 163, 163); /* Change day background to white */
+}
+
+/* Ensure navigation buttons and other text are black */
+.react-calendar__navigation button {
+    color: black; /* Change navigation button color to black */
+}
+
+/* Style the calendar header (e.g., month and year display) */
+.react-calendar__navigation__label {
+    color: black; /* Change header text color to black */
+}
+
+/* Customize the selected date styling */
+.react-calendar__tile--active {
+    background-color: #e0f7fa; /* Light blue background for selected date */
+    color: black; /* Ensure selected date text is black */
+}
+
+/* Add a blue hover effect on dates */
+.react-calendar__tile:hover {
+    background-color: #b3e5fc; /* Lighter blue hover background */
+    color: black; /* Keep text color black */
+}
+/* Change the background color of the calendar button */
+.react-calendar__calendar-button {
+  background-color: #c3cac4;  /* Replace this with your desired background color */
+  color: white;  /* Text color for contrast */
+  border: none;  /* Optional: remove border */
+  padding: 10px;  /* Optional: adjust padding */
+  border-radius: 5px;  /* Optional: add border radius */
+}
+
+/* Optional: Add hover effect for the calendar button */
+.calendar-button:hover {
+  background-color: #45a049;  /* Darker shade for hover effect */
+}

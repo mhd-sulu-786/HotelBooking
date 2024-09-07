@@ -1,0 +1,55 @@
+/* book.css */
+
+.my-book-container {
+    padding: 20px;
+  }
+  
+  .booking-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .booking-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .booking-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-height: 200px; /* Adjust as needed */
+    object-fit: cover;
+  }
+  
+  .booking-card .card-body {
+    padding: 15px;
+  }
+  
+  .booking-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .booking-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .booking-card .card-text strong {
+    color: #333;
+  }
+  
+  /* Ensure the container has a max width for better readability */
+  .my-book-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .booking-card {
+      margin-bottom: 1rem;
+    }
+  }
+  

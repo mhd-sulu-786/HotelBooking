@@ -1,0 +1,85 @@
+.room-guest-selector {
+    width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .rooms-list {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .room:last-child {
+    border-bottom: none;
+  }
+  
+  .room-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .guest-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .guest-control button {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .guest-control input {
+    width: 30px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 2px;
+  }
+  
+  .room-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .room-controls button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .room-controls button:hover {
+    background-color: #218838;
+  }
+  .placeholder-view {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  

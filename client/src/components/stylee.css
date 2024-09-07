@@ -1,0 +1,257 @@
+/* becomeMember.css */
+.become-member {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .heading {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .section.blue {
+    background-color: blue;
+  }
+  
+  .section.silver {
+    background-color: silver;
+    color: black;
+  }
+  
+  .section.gold {
+    background-color: gold;
+    color: black;
+  }
+  
+  .member-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .member-button.blue {
+    background-color: darkblue;
+    color: white;
+  }
+  
+  .member-button.silver {
+    background-color: gray;
+    color: white;
+  }
+  
+  .member-button.gold {
+    background-color: darkgoldenrod;
+    color: white;
+  }
+  
+  .terms-conditions {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid white;
+  }
+  /* src/components/Plans.css */
+
+.plans-container {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.plans-main {
+  font-size: 2.5em;
+  color: red;
+  gap: 30px;
+  margin-bottom: 40px;
+  margin-right: 1200px;
+}
+
+.plans-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.plans-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  text-align: left;
+}
+
+.plan-card li {
+  padding: 5px;
+  gap: 20px;
+}
+
+
+.plan-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.plan-icon {
+  font-size: 2.5rem;
+  margin-right: 10px;
+  color: #363434c1;
+  
+}
+
+.plan-card.blue .plan-icon {
+  color: #0d6efd;
+}
+
+.plan-card.silver .plan-icon {
+  color: #6c757d;
+}
+
+.plan-card.gold .plan-icon {
+  color: #ffc107;
+}
+
+.plan-card h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.plan-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.plan-card ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plan-card ul li .fa {
+  margin-right: 10px;
+}
+
+.plan-card.blue {
+  background: #0d6efd;
+}
+
+.plan-card.silver {
+  background: #6c757d;
+}
+
+.plan-card.gold {
+  background: #ffc107;
+}
+
+.plan-card.gold h2::before,
+.plan-card.silver h2::before,
+.plan-card.blue h2::before {
+  content: '★';
+  margin-right: 10px;
+  color: gold;
+}
+
+.terms-conditions {
+  padding: 20px;
+  background-color: #080808; 
+  margin-top: 100px;
+  border: 1px solid black;
+}
+
+.terms-conditions li   {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 0.9em;
+  color: #f9ecec; /* Slightly lighter color for the list items */
+  line-height: 2;
+ 
+}
+
+.terms-conditions ul {
+  list-style-type: disc; /* Bullet points for list items */
+  padding-left: 70px; /* Padding to indent the list */
+}
+
+.terms-conditions h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  
+}
+
+.terms-conditions li {
+  margin-bottom: 10px;
+  
+}
+.plan-card .blue-plan-button {
+  background-color: #0c0c0cc0; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 60px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.plan-card .blue-plan-button:hover {
+  background-color: #2f74bee1; /* Darker blue for hover state */
+}
+.plan-card .silver-plan-button {
+  background-color: #0c0c0c9c; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 60px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.plan-card .silver-plan-button:hover {
+  background-color: #ccd2d8; /* Darker blue for hover state */
+}
+
+.plan-card .gold-plan-button {
+  background-color: #0b09099d; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 60px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.plan-card .gold-plan-button:hover {
+  background-color: #77796f; /* Darker blue for hover state */
+}

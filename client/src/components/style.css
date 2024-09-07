@@ -1,0 +1,181 @@
+.loginPage {
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Apply red color to h3 elements with the specific text "HO BO" */
+.loginPage h3 {
+    color: red !important; /* Ensure the text color is red */
+    text-align: left; /* Align text to the left if needed */
+    margin-top: -50px; /* Adjust the top margin if needed */
+    margin-left: -200px; /* Adjust the left margin if needed */
+}
+
+
+.infoText {
+    font-size: 1.3rem;
+    color: #090909;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 30px;
+}
+
+.loginForm {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; 
+    text-align: center; 
+}
+
+.text-warning {
+    color: #dc3545; 
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem; 
+}
+
+.form-control {
+    border: 1px solid #ced4da; 
+    border-radius: 0;
+    padding: 0.9rem; 
+    font-size: 1rem;
+    width: calc(100% - 50px); 
+    margin: 0 auto;
+}
+
+/* Override Bootstrap's btn-success styles with higher specificity */
+.loginPage .btn-success {
+    background-color: red !important; /* Force background color to red */
+    border-color: red !important; /* Force border color to red */
+    color: white !important; /* Force text color to white */
+}
+
+.loginPage .btn-success:hover {
+    background-color: darkred !important; /* Force background color on hover to dark red */
+    border-color: darkred !important; /* Force border color on hover to dark red */
+}
+
+.loginPage .btn-success:focus, .loginPage .btn-success.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5) !important; /* Adjust focus shadow to match red */
+}
+
+.loginPage .btn-success:active, .loginPage .btn-success.active {
+    background-color: darkred !important; /* Force background color when active to dark red */
+    border-color: darkred !important; /* Force border color when active to dark red */
+}
+
+.loginPage .btn-success:disabled {
+    background-color: red !important; /* Force background color when disabled to red */
+    border-color: red !important; /* Force border color when disabled to red */
+    color: white !important; /* Force text color when disabled to white */
+}
+
+
+.btn:hover {
+    background-color: #dc3545;
+}
+
+.terms-and-conditions {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: blue;
+    text-decoration:underline
+}
+
+
+.register-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.registerPage {
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.registerForm {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.text-warning {
+    color: #dc3545; 
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+}
+
+/* Scoped red button styling for the .registerPage component */
+.registerPage .btn-red {
+    background-color: red !important; /* Set the button background to red */
+    border-color: red !important; /* Set the button border to red */
+    color: white !important; /* Set the button text color to white */
+}
+
+.registerPage .btn-red:hover {
+    background-color: darkred !important; /* Darker red for hover effect */
+    border-color: darkred !important; /* Darker red border for hover effect */
+}
+
+.registerPage .btn-red:focus, .registerPage .btn-red.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5) !important; /* Red shadow on focus */
+}
+
+.login-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.login-link a {
+    color: blue;
+    text-decoration: underline; 
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

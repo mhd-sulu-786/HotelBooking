@@ -1,0 +1,340 @@
+.user-dashboard .nav-link {
+    color: rgb(15, 14, 14); 
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    margin: 0 1rem; 
+  }
+  .user-dashboard .nav-link:hover {
+    color: #d21111; /* Set hover color */
+  }
+  .user-dashboard .nav-link div {
+    margin-left: 10px 
+  }
+  
+  .user-dashboard .nav-link:hover {
+    color: #333; 
+  }
+  .user-dashboard .nav-link {
+    color: black; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 1rem;
+  }
+  .user-dashboard .nav-subtext {
+    margin-top: 0.25rem; 
+    font-size: 0.75rem; 
+    color: #666;
+  }
+  
+  .custom-image1 {
+    width: 100%; 
+    height: 100px; 
+    object-fit: cover; 
+  }
+  
+.flame-icon {
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+/* Flexbox utility classes for alignment */
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+/* Margin utility classes */
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mr-2 {
+  margin-right: 2rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+/* Specific styling for the email form section */
+.email-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.email-form-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.email-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.map-section {
+  margin-top: 30px;
+  
+}
+.custom-map {
+  width: 100%;
+  height: 200px;
+  width: 700px;
+  margin-right: 800px; /* Adjust as needed */
+}
+.country-list {
+  list-style-type: none;
+  word-break: break-all;
+ 
+  padding: 20px;
+}
+
+.country-list li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.custom-list{
+  word-wrap: break-word;
+  margin-left: 700px;
+  margin-top: -400px;
+}
+h3, p, h4 {
+  padding: 20px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.footer {
+  background-color: #219ab58e;
+  padding: 20px 0;
+  color: #343a40;
+  width: 100%; /* Full width of the viewport */
+  position: relative;
+  left: 0; /* Align to the left edge */
+}
+
+.footer .container {
+  width: 100%; /* Make sure the container spans full width */
+  max-width: 100%; /* Prevent default max-width of Bootstrap container */
+  padding: 0; /* Remove default padding */
+}
+
+.diamond-jubilee, .contact-info, .newsletter {
+  text-align: center;
+  padding: 10px;
+}
+
+.diamond-jubilee h2, .contact-info h3, .newsletter h3 {
+  font-size: 24px; /* Same font size for uniformity */
+  margin-bottom: 10px;
+}
+
+.diamond-jubilee p, .contact-info p, .newsletter p {
+  font-size: 16px;
+  color: #6c757d;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.diamond-jubilee .social-icons {
+  margin-top: 10px;
+}
+
+.diamond-jubilee .social-icons a {
+  font-size: 24px; /* Increased size */
+  margin: 0 10px; /* Adjusted margin */
+  color: #140faf;
+  text-decoration: none;
+  padding: 10px; /* Padding added */
+}
+
+.diamond-jubilee .social-icons a:hover {
+  color: #007bff; /* Adjust color on hover */
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px; 
+  margin-left: 100px;/* Adjusted margin to bring heading closer to contact details */
+  color: #333; /* Add desired color for the heading */
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #212d38;
+  padding: 2px;
+  margin: 0.2rem ;
+  margin-left: 100px;
+  display: flex;
+  align-items: center; /* Vertically align icons and text */
+  justify-content: center; /* Center align text horizontally */
+}
+
+.contact-info .contact-info-icon {
+  font-size: 20px; /* Adjust icon size */
+  margin-right: 5px;
+}
+
+.newsletter h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.newsletter .newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter .form-control {
+  width: 60%;
+  margin-right: 100px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  font-size: 16px;
+
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 500px;
+  background-color: #5b5658ec;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+ 
+}
+
+.sidebar h2 {
+  margin: 20px 0;
+  font-size: 20px;
+ 
+  
+}
+.sidebar a {
+  text-decoration: none;
+  color: red; 
+  
+}
+
+
+.btn-outline-primary, .btn-outline-secondary {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 18px;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+}
+.alphabet-column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.letter-button {
+  margin: 2px; /* Small margin between buttons */
+  text-align: center;
+  flex: 0 0 auto; /* Prevent buttons from growing or shrinking */
+}
+
+.city-card {
+  background-color: #6157573e;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+#account-dropdown {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: black; /* Default color is black */
+}
+
+#account-dropdown > div {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+#account-dropdown:focus,
+#account-dropdown:hover {
+  color: blue; /* Change color to blue on hover/focus */
+  text-decoration: none;
+  outline: none;
+}
+
+#account-dropdown svg {
+  color: inherit; /* Inherit the text color for the icon */
+}

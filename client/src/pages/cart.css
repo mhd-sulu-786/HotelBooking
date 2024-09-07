@@ -1,0 +1,75 @@
+/* Container for the entire cart */
+.cart-container {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  /* Grid container for cart items */
+  .cart-table {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px 200px; /* Define column widths */
+    gap: 10px; /* Space between cells */
+    align-items: center; /* Align items vertically */
+  }
+  
+  /* Grid row */
+  .cart-row {
+    display: contents; /* Make children act as grid items */
+  }
+  
+  /* Cell styling */
+  .cart-cell {
+    padding: 10px; /* Padding inside cells */
+  }
+  
+  /* Image styling */
+  .cart-cell img {
+    width: 80px; /* Small image size */
+    height: 80px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: rounded corners */
+  }
+  
+  /* Styling for hotel name */
+  .cart-cell.hotel-name {
+    font-size: 14px; /* Small font size for hotel names */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align text */
+  }
+  
+  /* Styling for price */
+  .cart-cell.price {
+    font-size: 14px; /* Font size for price */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* Button container styling */
+  .cart-cell.buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  /* Small button size */
+  .cart-cell .btn-small {
+    font-size: 14px; /* Smaller font size for buttons */
+    padding: 5px 10px; /* Adjust padding for smaller buttons */
+  }
+  
+  /* Custom yellow button styling */
+  .custom-yellow-button {
+    background-color: yellow;
+    border: none;
+    color: black;
+  }
+  
+  .custom-yellow-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  /* Divider line between rows */
+  .cart-divider {
+    border-top: 1px solid black; /* Black divider line */
+    margin: 10px 0; /* Space above and below the divider */
+  }
+  

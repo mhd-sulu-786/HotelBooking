@@ -1,0 +1,274 @@
+
+/* Style for the hotel card */
+.hotel-card1 {
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    padding: 20px; /* Padding inside the card */
+    margin-bottom: 20px; /* Space below each card */
+    background-color: #fff; /* White background for the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    height:430px;
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  .hotel-card-content1 {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Image on the left, text on the right */
+  }
+  
+  .hotel-image1 {
+    flex: 1; /* Image takes up equal space */
+    margin-right: 20px; /* Space between image and text */
+  }
+  
+  .hotel-details1 {
+    flex: 1; /* Text takes up more space */
+  }
+  
+  .hotel-details1 .p{
+    margin-top: 20px;
+    gap: 10px;
+    color: #aabdaf;
+  }
+  
+  
+  .hotel-buttons {
+    margin-top: 1px;
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 10px;  /* Space above the buttons */
+  }
+  
+  .hotel-buttons .btn {
+    margin-right: 10px; /* Space between buttons */
+  }
+  
+  .hotel-buttons   .btn-light-custom {
+    background-color: white; /* White background */
+    color: black; /* Black text color */
+    border: 1px solid black; /* Black border */
+  }
+  
+  .hotel-buttons .btn-light-custom:hover {
+    background-color: #8895a156; /* Light grey background on hover */
+    border-color: #ccc;
+    color: #000; /* Grey border on hover */
+  }
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .amenity-icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .amenity-name {
+    font-size: 16px;
+  }
+  
+  
+  .view-more {
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .view-more:hover {
+    text-decoration: none;
+    color: #04264b;
+  }
+  
+  
+  /* Styles for Hotel Policies */
+  .hotel-policies {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .hotel-policies h4 {
+    margin-bottom: 15px;
+  }
+  
+  .policy-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .policy-label {
+    flex: 0 0 120px; /* Fixed width for label */
+    font-weight: bold;
+  }
+  
+  .policy-box {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-left: 10px;
+    font-weight: normal;
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  /* Styles for the list */
+  .policy-list {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .policy-list li {
+    margin-bottom: 10px;
+  }
+  
+  
+  .hotel-details2 .booking {
+    display: flex; /* Ensure that align-items works */
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Make the element span the full width of its container */
+    max-width: 600px; /* Set a maximum width for better control */
+    margin: 0 auto; /* Center horizontally within its container */
+    padding: 10px; /* Optional: Add padding for spacing */
+  }
+  
+  
+  .main-container1 {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar1 {
+    background-color: #333;
+  }
+  
+  .navbar1 .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .navbar1 .search-form {
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+  
+  .navbar1 .search-input {
+    width: 100%;
+  }
+  
+  .navbar1 .search-button {
+    margin-left: 10px;
+  }
+  
+  .nav-right .nav-link {
+    color: #fff;
+  }
+  
+  
+  /* Footer styles */
+  .footer-wrapper {
+    background-color: #332c2c36;
+  }
+  
+  .footer2 {
+    background-color: #3333331e;
+    width: 100%;
+  }
+  
+  .diamond-jubilee, .contact-info, .newsletter {
+    color: #151313;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .newsletter-form .form-control {
+    width: auto;
+    display: inline-block;
+  }
+  
+  .newsletter-form .btn-danger {
+    margin-left: 10px;
+  }
+  
+  /* Modal styles */
+  .modal-content2 {
+    display: flex;
+  }
+  
+  .modal-image2 {
+    flex: 1;
+    margin-right: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    backface-visibility: hidden;
+    width: max-content !important;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px); /* Adjusted to be centered */
+  }
+  
+  
+  /* Styling for action buttons container */
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Styling for individual buttons */
+  .add-to-cart,
+  .booking {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .add-to-cart {
+    background-color: #007bff;
+    border: none;
+    color: white;
+  }
+  
+  .booking {
+    background-color: #28a745;
+    border: none;
+    color: white;
+  }
+  
+  /* Ensures buttons are visually distinct */
+  .add-to-cart:hover,
+  .booking:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  /* Ensure mobile responsiveness */
+  @media (max-width: 768px) {
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .add-to-cart,
+    .booking {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  

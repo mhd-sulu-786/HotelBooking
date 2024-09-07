@@ -1,0 +1,67 @@
+.book-page-container {
+  /* Custom styles for the Book page */
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+/* General form styling */
+.book-page-container .form-a, .form-b {
+  margin-bottom: 20px; /* Space between forms */
+}
+
+/* Styling for form-a (Date Range) */
+/* General form styling */
+.book-page-container.form-a {
+  margin-top: -10px; /* Add margin-top for spacing from the previous section */
+}
+
+/* Styling for form-b (Room & Guest Selector) */
+/* General form styling */
+.book-page-container.form-b {
+  margin-top: 10px; /* Adjust margin for gap between the two forms */
+  margin-bottom: 30px; /* Ensure some spacing below the form */
+}
+
+
+.book-page-container .carda {
+  background-color: #ebeef0; 
+  margin-right: 20px;/* Customize the background color for carda */
+}
+
+.book-page-container.cardb {
+  background-color: #e9ecef;
+  margin-right: 200px;  /* Customize the background color for cardb */
+}
+
+/* Class for amount details */
+.book-page-container .amount-details {
+  margin-bottom: 5px; /* Decreased gap between the amount elements */
+  margin-top: -10px; /* Optional: Decreased gap above the element */
+}
+
+/* Specific styling for the Payable Amount */
+.book-page-container .payable-amount {
+  margin-top: -10px; /* Slightly increased gap above Payable Amount for emphasis */
+}
+
+
+.book-page-container .btn-submit {
+  background-color: #1d8b71;
+  color: white;
+  width: 200px;
+  margin-left: 350px;
+  margin-top: 40px;
+}
+
+.book-page-container .btn-payment {
+  background-color: #147b10;
+  color: white;
+  width: 400px;
+  margin-left: 10px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.book-page-container .form-control {
+  border: 1px solid #ced4da;
+}

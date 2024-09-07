@@ -1,0 +1,208 @@
+/* Style for the navbar */
+.navbar1 {
+  background-color: #f8f9fa; /* Light background for the navbar */
+  border-bottom: 1px solid #ddd; /* Border below the navbar */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align the navbar to the top */
+  width: 100%; /* Full width of the viewport */
+  z-index: 1000; /* Ensure the navbar is on top of other elements */
+  height: 120px; /* Ensure the navbar height */
+  padding: 10px 20px; /* Adjust padding if necessary */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+/* Style for the brand text in the navbar */
+.ohobo-brand {
+  color: red; /* Set brand text color to red */
+  font-weight: bold; /* Optional: make the brand text bold */
+}
+
+/* Container for the search form */
+.search-form-container {
+  flex-grow: 1; /* Allow the search form to grow and take available space */
+}
+
+/* Style for the search form */
+.search-form {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  flex-grow: 1; /* Allow form to take available space */
+  gap: 8px; /* Add gap between elements to reduce size */
+  padding: 0; /* Remove extra padding */
+}
+
+/* Style for the search input */
+.search-input {
+  border-radius: 0; /* Remove border-radius for a flat design */
+  margin-right: 5px; /* Adjust space between input and button */
+  font-size: 14px; /* Decrease font size to make input smaller */
+  padding: 5px; /* Adjust padding for a smaller input */
+  width: 800px; /* Adjust width based on content */
+}
+
+/* Style for the search button */
+.search-button {
+  border-radius: 0; /* Remove border-radius for a flat design */
+  color: #28a745; /* Green text color */
+  border-color: #aabdaf; /* Border color */
+  padding: 5px 10px; /* Adjust padding to decrease button size */
+  font-size: 14px; /* Decrease font size to make the button smaller */
+  width: 100px; /* Set a fixed width for the button */
+  text-align: center; /* Center text inside button */
+  margin-left: auto; /* Push the button to the right */
+}
+
+/* Style for the navigation links */
+.nav-right {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-right .nav-link {
+  text-align: center; /* Center text inside nav link */
+  margin-left: 20px; /* Space between nav items */
+  color: #000; /* Default text color */
+}
+
+.nav-right .nav-link:hover {
+  color: #007bff; /* Blue color on hover */
+}
+
+/* Style for the phone and login/signup sections */
+.nav-right .nav-link div {
+  margin-top: 5px; /* Space above the text */
+}
+
+.nav-right .nav-link .nav-subtext {
+  font-size: 12px; /* Smaller text for subtext */
+  color: #666; /* Gray color for subtext */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 360px; /* Set the width of the sidebar */
+  padding: 20px; /* Padding for the sidebar */
+  background-color: #f8f9fa; /* Background color */
+  border-right: 1px solid #ddd; /* Border on the right */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: fixed; /* Fix the sidebar position */
+  top: 150px; /* Adjust the top position based on the navbar height */
+  height: calc(100% - 56px);
+  margin-bottom: 60px; /* Adjust height based on the navbar height */
+}
+
+/* Additional sidebar styles */
+.sidebar .filter-section {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; /* Space below the section */
+}
+
+.sidebar .filter-section h5 {
+  margin: 0; /* Remove default margin */
+}
+
+.sidebar .clear-all {
+  color: #007bff; /* Blue color */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Indicate clickable */
+}
+
+.clear-all:hover {
+  color: #ff0000; /* Red color on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Custom checkbox style */
+.form-check-input {
+  appearance: none; /* Remove default styling */
+  background-color: #fff; /* White background */
+  border: 2px solid #000; /* Black border */
+  width: 16px; /* Size of the checkbox */
+  height: 16px; /* Size of the checkbox */
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+.form-check-input:checked {
+  background-color: #000; /* Black background when checked */
+  border-color: #000; /* Black border when checked */
+}
+
+.form-check-input:checked::before {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #fff; /* White checkmark */
+  transform: translate(-50%, -50%); /* Center the checkmark */
+  clip-path: polygon(0 0, 50% 100%, 100% 0); /* Draw the checkmark */
+}
+
+/* Custom scrollbar style for the sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f7f2f2; /* Background color of the scrollbar track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #dedce6; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Optional: rounded corners for the scrollbar thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #504e4e3e; /* Color of the scrollbar thumb on hover */
+}
+
+.sidebar .form-check-input {
+  accent-color: black; /* This will change the color of the checkbox */
+}
+
+.sidebar h6 {
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.sidebar .form-check {
+  margin-bottom: 10px; /* Space below each checkbox */
+}
+
+.sidebar .form-check label {
+  margin-left: 5px; /* Space between checkbox and label */
+}
+
+/* Main container style */
+.main-container {
+  display: flex; /* Use flexbox for layout */
+  padding-top: 70px; /* Adjust padding to account for the fixed navbar */
+}
+
+/* Search results container style */
+.search-results {
+  flex-grow: 1; /* Allow the search results to take available space */
+  padding: 20px; /* Padding around the search results */
+  margin-left: 360px; /* Margin to account for the fixed sidebar */
+}
+
+/* Style for the hotel images */
+.modal-image1 {
+  margin-bottom: 20px; /* Space below the images */
+}
+
+.modal-image1 {
+  display: flexbox; /* Ensure images take full width of their container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners for images */
+}
+
+
+.hotel-details1.btn-small {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
