@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card } from 'react-bootstrap';
+import axios from 'axios';
 import './book.css';
 
 const MyBook = () => {
   const [bookings, setBookings] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    // Fetch user data from local storage
     const user = JSON.parse(localStorage.getItem('MyUser'));
-    console.log('Fetched user:', user); // Debugging line
+  
     if (user) {
-      // Fetch bookings for the logged-in user
-      const userBookings = JSON.parse(localStorage.getItem(user.email)) || [];
-      console.log('Fetched bookings:', userBookings); // Debugging line
-      setBookings(userBookings);
+      axios
+        .get(`http://localhost:5000/data/users/${user._id}/bookings`)  // Ensure endpoint is correct
+        .then((response) => {
+          setBookings(response.data.bookings);
+        })
+        .catch((error) => {
+          console.error('Error fetching bookings:', error);
+          setError('Failed to fetch bookings');
+        });
     } else {
-      // Handle case where user is not found
-      alert('User not found. Please log in.');
+      setError('User not found. Please log in.');
     }
   }, []);
   
@@ -24,7 +29,9 @@ const MyBook = () => {
   return (
     <Container className="my-book-container mt-4">
       <h2>My Bookings</h2>
-      {bookings.length === 0 ? (
+      {error ? (
+        <p>{error}</p>
+      ) : bookings.length === 0 ? (
         <p>No bookings found.</p>
       ) : (
         bookings.map((booking, index) => (
@@ -40,6 +47,6 @@ const MyBook = () => {
       )}
     </Container>
   );
-};
+}  
 
 export default MyBook;

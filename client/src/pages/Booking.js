@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Card, Form, Button, Modal } from 'react-bootstrap';
 import Calendar from 'react-calendar';
 import RoomGuestSelector from './RoomGuestSelector';
@@ -9,16 +9,14 @@ import './Book.css';
 import axios from 'axios';
 
 const Book = () => {
+  // Extract hotel details from location state
   const location = useLocation();
   const { hotelName, hotelAddress, hotelPrice } = location.state || {};
-
+  const navigate=useNavigate();
+  // State variables
   const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-  const [formData, setFormData] = useState({
-    name: '',
-    mobile: '',
-    email: '',
-  });
+  const [endDate, setEndDate] = useState(new Date(new Date().setDate(new Date().getDate() + 1))); // Set endDate to 1 day after startDate
+  const [formData, setFormData] = useState({ name: '', mobile: '', email: '' });
   const [showCalendar, setShowCalendar] = useState(false);
   const [selectingStartDate, setSelectingStartDate] = useState(true);
   const [rooms, setRooms] = useState([{ id: 1, guests: 1 }]);
@@ -27,86 +25,11 @@ const Book = () => {
   const [discount, setDiscount] = useState(0);
   const [payableAmount, setPayableAmount] = useState(0);
 
+  // Retrieve user data from localStorage
   const userToken = localStorage.getItem('MyUser');
-  const user = userToken ? JSON.parse(userToken) : null; // Ensure correct parsing
+  const user = userToken ? JSON.parse(userToken) : null;
 
-  useEffect(() => {
-    if (!user) {
-      alert('No user data found in local storage.');
-    }
-  }, [user]);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!formData.name || !formData.mobile || !formData.email) {
-      alert('Please fill in all personal details before proceeding to payment.');
-      return;
-    }
-
-    if (!user) {
-      alert('User not found. Please log in.');
-      return;
-    }
-
-    try {
-      const bookingData = {
-        userId: user._id, // Use user._id if user is an object
-        hotelName,
-        hotelAddress,
-        hotelPrice,
-        startDate,
-        endDate,
-        rooms,
-        name: formData.name,
-        mobile: formData.mobile,
-        email: formData.email,
-        totalAmount: parseFloat(totalAmount),
-        discount: parseFloat(discount),
-        payableAmount: parseFloat(payableAmount),
-      };
-
-      await axios.post('http://localhost:5000/api/book', bookingData);
-      alert('Booking successful');
-    } catch (error) {
-      console.error('Error creating booking:', error);
-      alert('Error creating booking: ' + error.message);
-    }
-  };
-
-  const handleDateClick = (isStartDate) => {
-    setSelectingStartDate(isStartDate);
-    setShowCalendar(true);
-  };
-
-  const handleCalendarClose = () => {
-    setShowCalendar(false);
-  };
-
-  const handleDateChange = (selectedDate) => {
-    if (selectingStartDate) {
-      if (selectedDate > endDate) {
-        alert('Start date cannot be later than end date');
-        return;
-      }
-      setStartDate(selectedDate);
-    } else {
-      if (selectedDate < startDate) {
-        alert('End date cannot be earlier than start date');
-        return;
-      }
-      setEndDate(selectedDate);
-    }
-    setShowCalendar(false);
-  };
-
+  // Effect to update total and payable amounts whenever room or date details change
   const calculateTotalAmount = useCallback(() => {
     const numberOfNights = Math.max((endDate - startDate) / (1000 * 60 * 60 * 24), 1);
     const roomCount = rooms.length;
@@ -127,6 +50,85 @@ const Book = () => {
     setDiscount(discountAmount.toFixed(2));
     setPayableAmount((parseFloat(totalAmount) - discountAmount).toFixed(2));
   }, [totalAmount]);
+
+  // Handle date selection and validation
+  const handleDateChange = (selectedDate) => {
+    if (selectingStartDate) {
+      if (selectedDate >= endDate) {
+        const newEndDate = new Date(selectedDate);
+        newEndDate.setDate(newEndDate.getDate() + 1); // Add one day to the end date
+        setEndDate(newEndDate);
+      }
+      setStartDate(selectedDate);
+    } else {
+      if (selectedDate <= startDate) {
+        alert('End date must be after the start date');
+        return;
+      }
+      setEndDate(selectedDate);
+    }
+    setShowCalendar(false);
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { name, mobile, email } = formData;
+
+    if (!name || !mobile || !email) {
+      alert('Please fill in all personal details before proceeding to payment.');
+      return;
+    }
+
+    if (!user) {
+      alert('User not found. Please log in.');
+      return;
+    }
+
+    // Prepare booking data
+    const bookingData = {
+      userId: user._id,
+      hotelName,
+      hotelAddress,
+      hotelPrice,
+      startDate: startDate.toISOString(),  // Ensure dates are in ISO format
+      endDate: endDate.toISOString(),      // Ensure dates are in ISO format
+      rooms,
+      name,
+      mobile,
+      email,
+      totalAmount: parseFloat(totalAmount),
+      discount: parseFloat(discount),
+      payableAmount: parseFloat(payableAmount),
+    };
+
+    // Log the booking data to verify it's correct
+    console.log('Booking Data:', bookingData);
+    navigate('/mybook');
+    // Validate if any field is undefined
+    Object.entries(bookingData).forEach(([key, value]) => {
+      if (value === undefined || value === null || value === '') {
+        console.error(`${key} is missing or invalid`);
+      }
+    });
+
+    try {
+      // Make the POST request
+      await axios.post('http://localhost:5000/api/book', bookingData);
+      alert('Booking successful');
+    } catch (error) {
+      console.error('Error creating booking:', error);
+      alert(`Error creating booking: ${error.response?.data?.error || error.message}`);
+    }
+  };
+
+  // Render nothing if user is not logged in
+  if (!user) {
+    return <p>User not logged in. Please log in to proceed.</p>;
+  }
 
   if (!hotelName) {
     return <p>No hotel details available.</p>;
@@ -196,7 +198,7 @@ const Book = () => {
                     type="text"
                     placeholder="From Date"
                     value={startDate.toLocaleDateString()}
-                    onClick={() => handleDateClick(true)}
+                    onClick={() => setSelectingStartDate(true)}
                     readOnly
                   />
                 </Col>
@@ -205,7 +207,7 @@ const Book = () => {
                     type="text"
                     placeholder="To Date"
                     value={endDate.toLocaleDateString()}
-                    onClick={() => handleDateClick(false)}
+                    onClick={() => setSelectingStartDate(false)}
                     readOnly
                   />
                 </Col>
@@ -215,7 +217,10 @@ const Book = () => {
             <Form.Group controlId="formRoomGuestSelector" className="form-b">
               <Form.Control
                 type="text"
-                value={`${rooms.length} Room${rooms.length > 1 ? 's' : ''}, ${rooms.reduce((total, room) => total + room.guests, 0)} Guest${rooms.reduce((total, room) => total + room.guests, 0) !== 1 ? 's' : ''}`}
+                value={`${rooms.length} Room${rooms.length > 1 ? 's' : ''}, ${rooms.reduce(
+                  (total, room) => total + room.guests,
+                  0
+                )} Guest${rooms.reduce((total, room) => total + room.guests, 0) !== 1 ? 's' : ''}`}
                 onClick={() => setShowRoomGuestSelector(true)}
                 readOnly
               />
@@ -232,23 +237,25 @@ const Book = () => {
         </Col>
       </Row>
 
-      <Modal show={showCalendar} onHide={handleCalendarClose} centered>
+      <Modal show={showCalendar} onHide={() => setShowCalendar(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Select Dates</Modal.Title>
+        </Modal.Header>
         <Modal.Body>
           <Calendar
-            onChange={handleDateChange}
+            minDate={new Date()}
             value={selectingStartDate ? startDate : endDate}
+            onChange={handleDateChange}
           />
         </Modal.Body>
       </Modal>
 
-      <Modal show={showRoomGuestSelector} onHide={() => setShowRoomGuestSelector(false)} centered>
-        <Modal.Body>
-          <RoomGuestSelector
-            rooms={rooms}
-            onChange={(updatedRooms) => setRooms(updatedRooms)}
-          />
-        </Modal.Body>
-      </Modal>
+      <RoomGuestSelector
+        show={showRoomGuestSelector}
+        onHide={() => setShowRoomGuestSelector(false)}
+        rooms={rooms}
+        setRooms={setRooms}
+      />
     </Container>
   );
 };

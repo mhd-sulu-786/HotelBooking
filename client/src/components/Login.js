@@ -19,17 +19,23 @@ const Login = ({ setUser }) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log("Sending payload:", values);
-
+    
         try {
             const result = await axios.post('http://localhost:5000/auth/login', values, { withCredentials: true });
             console.log("Server response:", result);
-
+    
             if (result.status === 200) {
-                // Store the complete user data in localStorage
-                localStorage.setItem('MyUser', JSON.stringify(result.data));
-
-                // Redirect user based on their role
-                navigate(result.data.isAdmin ? '/admin-dashboard' : '/user-dashboard');
+                const userData = result.data.user;
+    
+                // Store the token and user data in localStorage
+                localStorage.setItem('MyUser', JSON.stringify(userData));
+    
+                // Check if the user is an admin and navigate accordingly
+                if (userData.isAdmin) {
+                    navigate('/admin-dashboard');
+                } else {
+                    navigate('/user-dashboard');
+                }
             } else {
                 setError(result.data.Error || "An unexpected error occurred.");
             }
@@ -38,7 +44,7 @@ const Login = ({ setUser }) => {
             setError(err.response?.data?.Error || "Invalid email or password. Please try again.");
         }
     };
-
+    
     return (
         <div className='loginPage'>
             <div className='infoText'>

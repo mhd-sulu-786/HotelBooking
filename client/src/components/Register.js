@@ -4,7 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import './style.css'; 
 
 const Register = () => {
-    const [values, setValues] = useState({ email: '', password: '', isAdmin: false });
+    const [values, setValues] = useState({ email: '', password: '', isAdmin: true });
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 

@@ -16,6 +16,7 @@
     dotenv.config(); // Load environment variables from .env file
 
     const authRoutes = require('./routes/auth');
+const userrouter = require('./routes/user');
 
     const app = express();
 
@@ -44,7 +45,8 @@
     app.use('/amenities', amenityRoutes); 
     app.use('/api/hotels', hotelRoutes);
     app.use('/api/cart', cartRoutes);    
-    app.use('/api/book', bookingRoutes);
+    app.use('/api', bookingRoutes);
+    app.use('/data',userrouter)
     app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
